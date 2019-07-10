@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.davidcheah</groupId>
-	<artifactId>WebApplication</artifactId>
+	<artifactId>Vulnerable</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>WebApplication Maven Webapp</name>
@@ -23,6 +23,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>WebApplication</finalName>
+		<finalName>Vulnerable</finalName>
 	</build>
 </project>

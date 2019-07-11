@@ -44,10 +44,11 @@ public class SearchServlet extends HttpServlet {
 
 	public List<Book> search(String name) {
 		
+		//Sap%' OR '1'='1'; -- 
 		String url = "jdbc:mysql://localhost:3306/hackmedb";
 		String dbUsername = "root";
 		String dbPassword = "root";
-		String query = "select * from books where name='" + name + "'";
+		String query = "SELECT * FROM books where NAME LIKE '%" + name + "%'";
 		
 		List<Book> bookList = new ArrayList<Book>();
 
@@ -61,6 +62,8 @@ public class SearchServlet extends HttpServlet {
 
 			// 4. Create a ResultSet
 			ResultSet rs = st.executeQuery(query);
+			
+			System.out.println(query);
 
 			while (rs.next()) {
 				Book book = new Book(rs.getInt(1), rs.getString(2), rs.getString(3));

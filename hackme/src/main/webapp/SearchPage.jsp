@@ -10,18 +10,20 @@
 </head>
 <body>
 	<form action="/hackme/search" method="get">
-		<h2>Search for products</h2>
+		<h2>Search for Books</h2>
 		<input type="text" name="bookName" /> <br> <input type="submit" />
 	</form>
 
 	<c:if test="${not empty bookList}">
 		<table border="1" style="width:100%">
 			<tr>
+				<td>Id</td>
 				<td>Name</td>
 				<td>Author</td>
 			</tr>
 			<c:forEach items="${bookList}" var="book">
 				<tr>
+					<td>${book.id}</td>
 					<td>${book.name}</td>
 					<td>${book.author}</td>
 				</tr>

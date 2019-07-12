@@ -1,14 +1,12 @@
 package com.davidcheah.hackme.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -33,7 +31,7 @@ public class CommentServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		System.out.println("POST request received " + request.getParameter("comment"));
 		addComment(new Comment(request.getParameter("comment"), 1));
-		response.sendRedirect("/hackme/comment");  
+		response.sendRedirect("/hackme/comment");
 	}
 
 	public void init() {
@@ -46,7 +44,6 @@ public class CommentServlet extends HttpServlet {
 	}
 
 	public void addComment(Comment comment) {
-		// Sap%' OR '1'='1'; --
 		String timeZoneOption = "?useTimezone=true&serverTimezone=UTC";
 		String url = "jdbc:mysql://localhost:3306/hackmedb" + timeZoneOption;
 		String dbUsername = "root";
@@ -79,8 +76,6 @@ public class CommentServlet extends HttpServlet {
 	}
 
 	public List<Comment> fetchAllComments() {
-
-		// Sap%' OR '1'='1'; --
 		String timeZoneOption = "?useTimezone=true&serverTimezone=UTC";
 		String url = "jdbc:mysql://localhost:3306/hackmedb" + timeZoneOption;
 		String dbUsername = "root";

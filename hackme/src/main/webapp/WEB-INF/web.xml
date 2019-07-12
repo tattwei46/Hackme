@@ -6,6 +6,6 @@
 	<display-name>A vulnerable site</display-name>
 
 	<welcome-file-list>
-		<welcome-file>SearchPage.jsp</welcome-file>
+		<welcome-file>LoginPage.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

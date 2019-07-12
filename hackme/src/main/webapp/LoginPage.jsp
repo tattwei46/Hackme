@@ -20,8 +20,8 @@
 					placeholder="Enter email" />
 			</div>
 			<div class="form-group">
-				<label>Password: </label> <input type="password" name="password" placeholder="Enter password"/>
-				<br>
+				<label>Password: </label> <input type="text" name="password" placeholder="Enter password"/>
+				<br><br>
 				<button type="submit" class="btn btn-primary">Login</button>
 			</div>
 		</form>

@@ -12,8 +12,8 @@
 </head>
 <body>
 	<div class="container">
-		<a href="/hackme/comment">Goto Comments</a>
-		<a href="/hackme/login">Logout</a> <br>
+		<div align="right"><a href="/hackme/comment">Goto Comments</a></div>
+		<div align="right"><a href="/hackme/login">Logout</a> <br></div>
 		<h2>Book Search Results</h2>
 		<c:if test="${not empty bookList}">
 			<table class="table table-bordered">

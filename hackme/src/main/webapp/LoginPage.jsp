@@ -13,12 +13,17 @@
 <body>
 	<div class="container">
 		<h2>Login</h2>
-		<br>
-		<font color="red">${errorMessage}</font>
+		<br> <font color="red">${errorMessage}</font>
 		<form action="/hackme/login" method="post">
-			Username: <input type="text" name="username" /> <br> 
-			Password: <input type="password" name="password" /> <br>
-			<input type="submit" />
+			<div class="form-group">
+				<label>UserName: </label> <input type="text" name="username"
+					placeholder="Enter email" />
+			</div>
+			<div class="form-group">
+				<label>Password: </label> <input type="password" name="password" placeholder="Enter password"/>
+				<br>
+				<button type="submit" class="btn btn-primary">Login</button>
+			</div>
 		</form>
 	</div>
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>

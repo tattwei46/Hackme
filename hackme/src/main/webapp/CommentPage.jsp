@@ -6,35 +6,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Search JSP Page</title>
+<title>Comment JSP Page</title>
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-		<a href="/hackme/comment">Goto Comments</a> <br>
-		<h2>Book Search Results</h2>
-		<c:if test="${not empty bookList}">
+		<a href="/hackme/search">Goto Book Search</a>
+		<h2>All Comments</h2>
+		<c:if test="${not empty commentList}">
 			<table class="table table-bordered">
 				<tr>
-					<th>Id</th>
-					<th>Name</th>
-					<th>Author</th>
+					<th>Comment</th>
+					<th>Author ID</th>
 				</tr>
-				<c:forEach items="${bookList}" var="book">
+				<c:forEach items="${commentList}" var="comment">
 					<tr>
-						<td>${book.id}</td>
-						<td>${book.name}</td>
-						<td>${book.author}</td>
+						<td>${comment.comment}</td>
+						<td>${comment.authorid}</td>
 					</tr>
 				</c:forEach>
 			</table>
 		</c:if>
+
 		<br>
-		<h2>Search for a book</h2>
-		<form action="/hackme/search" method="get">
-			<input type="text" name="bookName" /> <br>
-			<br> <input type="submit" />
+		<form action="/hackme/comment" method="post">
+			<h2>New Comment</h2>
+			<input type="text" name="comment" />
+			 <br><br> 
+			 <input type="submit" />
 		</form>
 	</div>
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>

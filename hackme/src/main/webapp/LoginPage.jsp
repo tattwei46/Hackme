@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Comment JSP Page</title>
+<title>Login JSP Page</title>
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	rel="stylesheet">
 </head>

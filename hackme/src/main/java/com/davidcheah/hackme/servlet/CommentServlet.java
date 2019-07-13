@@ -21,6 +21,8 @@ import com.davidcheah.hackme.model.Comment;
 public class CommentServlet extends HttpServlet {
 
 	// <script>alert(\'hello\')</script>
+	//<script type="text/javascript">window.location.href = "http://localhost:8080/hackme"</script>
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		System.out.println("GET request received");
 		List<Comment> commentList = fetchAllComments();

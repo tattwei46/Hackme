@@ -20,7 +20,7 @@ import com.davidcheah.hackme.model.Comment;
 @WebServlet("/comment")
 public class CommentServlet extends HttpServlet {
 
-	// <script>alert(\'hello\')</script>
+	//<script>alert(\'Hello From XSS\')</script>
 	//<script type="text/javascript">window.location.href = "http://localhost:8080/hackme"</script>
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

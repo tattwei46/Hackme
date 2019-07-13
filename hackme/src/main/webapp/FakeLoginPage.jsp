@@ -12,9 +12,9 @@
 </head>
 <body>
 	<div class="container">
-		<h2>Login</h2>
+		<h2>Fake Login</h2>
 		<br> <font color="red">${errorMessage}</font>
-		<form action="/hackme/login" method="post">
+		<form action="/hackme/fakelogin" method="post">
 			<div class="form-group">
 				<label>UserName: </label> <input type="text" name="username"
 					placeholder="Enter email" />

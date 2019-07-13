@@ -23,21 +23,10 @@ import com.davidcheah.hackme.model.User;
 @WebServlet("/fakelogin")
 public class FakeLoginServlet extends HttpServlet {
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		System.out.println("Get request received ");
-		request.getRequestDispatcher("/LoginPage.jsp").forward(request, response);
-	}
-
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		System.out.println(
 				"POST request received " + request.getParameter("username") + request.getParameter("password"));
-		User user = new User(request.getParameter("username"), request.getParameter("password"));
-		if (authenticate(user)) {
-			request.getRequestDispatcher("/SearchPage.jsp").forward(request, response);
-		} else {
-			request.setAttribute("errorMessage", "Invalid Credentials");
-			request.getRequestDispatcher("/LoginPage.jsp").forward(request, response);
-		}
+		response.sendRedirect("/hackme/login");
 	}
 
 	public void init() {
